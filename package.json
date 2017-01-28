@@ -9,10 +9,14 @@
   "author": "Pedro Bala Simón",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-notify": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "tether": "^1.4.0"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6"
+    "bootstrap": "^4.0.0-alpha.6",
+    "jquery": "^3.1.1"
   }
 }
