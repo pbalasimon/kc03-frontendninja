@@ -3,3 +3,10 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
+$background-color: #fafafa;
+$body-bg: $background-color;
+$brand-primary: #02b875;
+
+$font-family-sans-serif: 'Roboto', sans-serif;
+
+$fa-font-path: "../../dist/fonts";

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
+		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="Práctica módulo frontend ninja bootcamp">
@@ -9,12 +10,69 @@
 		<link rel="stylesheet" href="dist/css/main.css">
 	</head>
 	<body>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores at debitis dolor esse explicabo fugit,
-			harum id ipsa laboriosam libero maiores, necessitatibus officiis omnis quibusdam quos reprehenderit totam
-			ut?</p>
 
-		<script src="node_modules/tether/dist/js/tether.js"></script>
+		<nav id="primaryNav" class="navbar fixed-top navbar-light bg-faded">
+			<div class="container">
+				<a class="navbar-brand" href="#">Los viajes de Pedro</a>
+				<span class="navbar-text navbar-toggler-right">
+						<a href="#">Ingresar</a>
+						<span>/</span>
+						<a href="#">Registrarse</a>
+						<i class="fa fa-search" aria-hidden="true"></i>
+					</span>
+			</div>
+		</nav>
+
+		<nav id="secondaryNav" class="navbar fixed-top navbar-toggleable navbar-light bg-faded">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">España</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Europa</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Africa</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Asia</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Oceania</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<main>
+				<section id="posts">
+					<article>1</article>
+					<article>2</article>
+					<article>3</article>
+					<article>4</article>
+					<article>5</article>
+					<article>6</article>
+					<article>7</article>
+					<article>8</article>
+					<article>9</article>
+					<article>10</article>
+				</section>
+			</main>
+			<footer>Pedro Bala Simón &copy; Estudiante II Web Development Master Bootcamp</footer>
+		</div>
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
 		<script src="node_modules/jquery/dist/jquery.js"></script>
+		<script src="node_modules/tether/dist/js/tether.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 	</body>
 </html>

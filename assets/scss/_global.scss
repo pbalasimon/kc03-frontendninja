@@ -1,0 +1,81 @@
+body {
+  padding: 8rem 1rem 0rem 1rem;
+}
+
+#primaryNav {
+  .container {
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      .navbar-brand {
+        font-size: 0.9rem;
+      }
+      .navbar-text {
+        padding-top: .375rem;
+        font-size: 0.7rem;
+      }
+      .navbar-text > a {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+.navbar-toggleable .navbar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+#secondaryNav {
+  border-bottom: 1px solid rgba(0, 0, 0, .09);
+  top: 3rem;
+  @include media-breakpoint-down(xs) {
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+      min-height: 3rem;
+    }
+  }
+}
+
+.navbar-text {
+  span {
+    color: $brand-primary;
+  }
+}
+
+.navbar-brand {
+  color: $brand-primary !important;
+}
+
+.bg-faded {
+  background-color: $white;
+}
+
+.fa.fa-search {
+  cursor: pointer;
+  @extend .ml-2;
+}
+
+section {
+  article {
+    background-color: $white;
+    @extend .rounded;
+    @extend .p-2;
+    @extend .mb-2;
+    border: 1px solid rgba(0, 0, 0, .09);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  }
+}
+
+footer {
+  margin: 1rem 0rem 1rem 0rem;
+  padding-top: 1rem;
+  border-top: 1px solid $brand-primary;
+  color: $brand-primary;
+  font-size: 0.8rem;
+  text-align: center;
+}

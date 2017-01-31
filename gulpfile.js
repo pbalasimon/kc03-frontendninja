@@ -16,8 +16,14 @@ gulp.task('default', ['compile-sass'], function () {
     gulp.watch('./*.html', browserSync.reload);
 });
 
+gulp.task('compile-fa', function () {
+    gulp.src(
+        'node_modules/font-awesome/fonts/fontawesome-webfont.*')
+        .pipe(gulp.dest('dist/fonts/'));
+});
+
 // compila archivos sass
-gulp.task('compile-sass', function () {
+gulp.task('compile-sass', ['compile-fa'], function () {
     gulp.src('./assets/scss/main.scss')               // cargo main.scss
         .pipe(sass().on('error', function (error) {
             return notify().write(error);
