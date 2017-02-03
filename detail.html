@@ -11,7 +11,7 @@
 	</head>
 	<body>
 
-		<nav id="primaryNav" class="navbar fixed-top navbar-light">
+		<nav id="primaryNav" class="navbar fixed-top navbar-light bg-faded">
 			<div class="container">
 				<a class="navbar-brand" href="#">Los viajes de Pedro</a>
 				<span class="navbar-text navbar-toggler-right">
@@ -23,7 +23,7 @@
 			</div>
 		</nav>
 
-		<nav id="secondaryNav" class="navbar fixed-top navbar-toggleable navbar-light">
+		<nav id="secondaryNav" class="navbar fixed-top navbar-toggleable navbar-light bg-faded">
 			<div class="container">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -72,13 +72,13 @@
 						</div>
 						<div class="row">
 							<div class="col">
-								<h3><a class="title" href="detail.html">Viaje Egipto</a></h3>
+								<h3><a href="detail.html">Viaje Egipto</a></h3>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
 								<img class="image-article"
-									 src="https://dummyimage.com/1200x300/000000/fff.png&text=IMAGE"
+									 src="https://dummyimage.com/600x200/000000/fff.png&text=IMAGE"
 									 alt="Imagen artículo">
 							</div>
 						</div>
@@ -89,32 +89,8 @@
 								labore, maxime minima necessitatibus neque nesciunt quas qui, quod sed ullam.</p>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col">
-								<a class="read-more" href="detail.html">Leer mas...</a>
-							</div>
-						</div>
-						<div class="d-flex justify-content-end">
-							<div class="mr-auto"><i class="fa fa-heart-o fa-md" aria-hidden="true"></i></div>
-							<div><i class="fa fa-comments fa-md" aria-hidden="true"> 0 Comentarios</i></div>
-						</div>
 					</article>
 				</section>
-
-				<nav id="pagination">
-					<ul class="pagination justify-content-end">
-						<li class="page-item disabled">
-							<a class="page-link" href="#" tabindex="-1">Previous</a>
-						</li>
-						<li class="page-item"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item">
-							<a class="page-link" href="#">Next</a>
-						</li>
-					</ul>
-				</nav>
-
 			</div>
 		</main>
 
@@ -124,6 +100,8 @@
 		<script src="node_modules/jquery/dist/jquery.js"></script>
 		<script src="node_modules/tether/dist/js/tether.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="assets/js/articles.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="node_modules/handlebars/lib/index.js"></script>
 	</body>
 </html>

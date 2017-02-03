@@ -3,72 +3,109 @@ body {
 }
 
 #primaryNav {
+  background-color: $white;
   .container {
-    border-bottom: 1px solid rgba(0, 0, 0, .09);
+    border-bottom: 1px solid $border-color;
 
     @include media-breakpoint-down(xs) {
       margin-left: 0;
       margin-right: 0;
       padding-left: 0;
-      .navbar-brand {
+    }
+
+    .navbar-brand {
+      color: $brand-primary !important;
+      @include media-breakpoint-down(xs) {
         font-size: 0.9rem;
       }
-      .navbar-text {
+    }
+
+    .navbar-text {
+      span {
+        color: $brand-primary;
+      }
+      @include media-breakpoint-down(xs) {
         padding-top: .375rem;
         font-size: 0.7rem;
       }
-      .navbar-text > a {
-        font-size: 0.7rem;
+    }
+
+    .fa.fa-search {
+      cursor: pointer;
+      @extend .ml-2;
+    }
+  }
+
+}
+
+#secondaryNav {
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+  top: 3rem;
+  padding-left: 0;
+  padding-right: 1rem;
+
+  @include media-breakpoint-down(xs) {
+    top: 2.5rem;
+    .container {
+      margin-left: 0;
+      margin-right: 0;
+      min-height: 2.5rem;
+      .nav-link {
+        margin-left: 1rem !important;
       }
     }
   }
 }
 
-.navbar-toggleable .navbar-nav .nav-link {
-  padding-left: 0;
-  padding-right: 1rem;
-}
+#articles {
+  article {
+    background-color: $white;
+    border: 1px solid $border-color;
+    box-shadow: 0 1px 4px $border-color;
+    @extend .rounded;
+    @extend .p-3;
 
-#secondaryNav {
-  border-bottom: 1px solid rgba(0, 0, 0, .09);
-  top: 3rem;
-  @include media-breakpoint-down(xs) {
-    .container {
-      margin-left: 0;
-      margin-right: 0;
-      min-height: 3rem;
+    .row {
+      margin-bottom: 0.8rem;
+    }
+
+    .avatar {
+      @extend .rounded-circle;
+      @extend .mr-3;
+    }
+
+    .author-name {
+      font-size: 0.8rem;
+      color: $brand-primary;
+      display: block;
+    }
+
+    .date {
+      font-size: 0.8rem;
+      color: $brand-secondary;
+      display: block;
+    }
+
+    .title {
+      color: $black;
+      margin-top: 1rem;
+      text-decoration: none;
+    }
+
+    .image-article {
+      @extend .img-fluid;
+    }
+
+    .read-more {
+      color: $brand-secondary;
+      text-decoration: none;
     }
   }
 }
 
-.navbar-text {
-  span {
-    color: $brand-primary;
-  }
-}
-
-.navbar-brand {
-  color: $brand-primary !important;
-}
-
-.bg-faded {
-  background-color: $white;
-}
-
-.fa.fa-search {
-  cursor: pointer;
-  @extend .ml-2;
-}
-
-section {
-  article {
-    background-color: $white;
-    @extend .rounded;
-    @extend .p-2;
-    @extend .mb-2;
-    border: 1px solid rgba(0, 0, 0, .09);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-  }
+#pagination {
+  margin-top: 1rem;
 }
 
 footer {
