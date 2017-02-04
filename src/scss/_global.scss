@@ -58,50 +58,55 @@ body {
   }
 }
 
-#articles {
-  article {
-    background-color: $white;
-    border: 1px solid $border-color;
-    box-shadow: 0 1px 4px $border-color;
-    @extend .rounded;
-    @extend .p-3;
+.article {
+  background-color: $white;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 4px $border-color;
+  @extend .rounded;
+  @extend .p-3;
 
-    .row {
-      margin-bottom: 0.8rem;
-    }
+  .row {
+    margin-bottom: 0.8rem;
+  }
 
-    .avatar {
-      @extend .rounded-circle;
-      @extend .mr-3;
-    }
+  .article-avatar {
+    @extend .rounded-circle;
+    @extend .mr-3;
+  }
 
-    .author-name {
-      font-size: 0.8rem;
-      color: $brand-primary;
-      display: block;
-    }
+  .article-author {
+    font-size: 0.8rem;
+    color: $brand-primary;
+    display: block;
+  }
 
-    .date {
-      font-size: 0.8rem;
-      color: $brand-secondary;
-      display: block;
-    }
+  .article-date {
+    font-size: 0.8rem;
+    color: $brand-secondary;
+    display: block;
+  }
 
-    .title {
-      color: $black;
-      margin-top: 1rem;
-      text-decoration: none;
-    }
+  .article-title {
+    color: $black;
+    margin-top: 1rem;
+    text-decoration: none;
+  }
 
-    .image-article {
-      @extend .img-fluid;
-    }
+  .article-image {
+    @extend .img-fluid;
+  }
 
-    .read-more {
-      color: $brand-secondary;
-      text-decoration: none;
+  .article-read-more {
+    color: $brand-secondary;
+    text-decoration: none;
+    &:hover {
+      color: $brand-tertiary;
     }
   }
+}
+
+#like {
+  cursor: pointer;
 }
 
 #pagination {

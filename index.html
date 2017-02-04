@@ -56,28 +56,28 @@
 		<main>
 			<div class="container">
 				<section id="articles">
-					<article>
+					<article class="article" data-id="1">
 						<div class="row">
 							<div class="col">
 								<div class="media">
-									<img class="avatar"
-										 src="assets/images/pedro.jpeg"
+									<img class="article-avatar"
+										 src="src/images/pedro.jpeg"
 										 alt="Avatar Pedro">
 									<div class="media-body">
-										<span class="author-name">Pedro Bala Simón</span>
-										<span class="date">01/11/2010</span>
+										<span class="article-author">Pedro Bala Simón</span>
+										<span class="article-date">01/11/2010</span>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
-								<h3><a class="title" href="detail.html">Viaje Egipto</a></h3>
+								<h3><a class="article-title" href="detail.html">Viaje Egipto</a></h3>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col">
-								<img class="image-article"
+								<img class="article-image"
 									 src="https://dummyimage.com/1200x300/000000/fff.png&text=IMAGE"
 									 alt="Imagen artículo">
 							</div>
@@ -91,12 +91,12 @@
 						</div>
 						<div class="row">
 							<div class="col">
-								<a class="read-more" href="detail.html">Leer mas...</a>
+								<a class="article-read-more" href="detail.html">Leer mas...</a>
 							</div>
 						</div>
 						<div class="d-flex justify-content-end">
-							<div class="mr-auto"><i class="fa fa-heart-o fa-md" aria-hidden="true"></i></div>
-							<div><i class="fa fa-comments fa-md" aria-hidden="true"> 0 Comentarios</i></div>
+							<div id="like" class="mr-auto"><i class="fa fa-heart-o fa-md" aria-hidden="true"></i></div>
+							<div><i class="fa fa-comments fa-md" aria-hidden="true"> 2 Comentarios</i></div>
 						</div>
 					</article>
 				</section>
@@ -120,10 +120,6 @@
 
 		<footer>Los viajes de Pedro &copy; Estudiante II Web Development Master Bootcamp</footer>
 
-		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		<script src="node_modules/jquery/dist/jquery.js"></script>
-		<script src="node_modules/tether/dist/js/tether.js"></script>
-		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-		<script src="assets/js/main.js"></script>
+		<script src="dist/js/main.js"></script>
 	</body>
 </html>
