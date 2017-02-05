@@ -103,14 +103,21 @@ body {
       color: $brand-tertiary;
     }
   }
-}
-
-#like {
-  cursor: pointer;
+  #like {
+    cursor: pointer;
+  }
 }
 
 #pagination {
   margin-top: 1rem;
+}
+
+#back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  display: none;
 }
 
 footer {
