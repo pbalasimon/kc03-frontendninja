@@ -76,5 +76,4 @@ $(document).ready(function () {
             $(element).parent().closest(".has-danger").removeClass(errorClass).addClass("has-success");
         }
     });
-
 });

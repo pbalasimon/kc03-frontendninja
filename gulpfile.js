@@ -39,7 +39,8 @@ var jsConfig = {
 gulp.task('default', [sassConfig.taskName, jsConfig.taskName], function () {
     // arrancar el servidor de browserSync
     browserSync.init({
-        server: './'
+        // server: './'
+        proxy: "127.0.0.1:8000" // conectar browserSync con sparrest
     });
     // cuando haya cambios en los archivos .scss, compila sass
     gulp.watch(sassConfig.watchFiles, [sassConfig.taskName]);
@@ -73,7 +74,9 @@ gulp.task(jsConfig.taskName, function () {
     gulp.src(jsConfig.entryPoint)
         .pipe(tap(function (file) {
             // lo pasamos por browserify para importar los require
-            file.contents = browserify(file.path).bundle()
+            file.contents = browserify(file.path).bundle().on('error', function (error) {
+                return notify().write(error); // si hay error js muestra una notificación
+            })
         }))
         .pipe(buffer()) // convertimos a buffer para que funcione el siguiente pipe
         // .pipe(concat(jsConfig.concatFile))
