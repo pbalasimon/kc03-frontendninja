@@ -126,6 +126,10 @@ body {
   @extend .p-3;
   @extend .mt-3;
   @extend .mb-3;
+
+  .form-control:focus {
+    border-color: $brand-secondary;
+  }
 }
 
 #comments-list {

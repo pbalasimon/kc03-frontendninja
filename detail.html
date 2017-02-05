@@ -114,20 +114,23 @@
 				<div id="comments-form" class="container">
 					<div class="row">
 						<div class="col">
-							<form>
+							<form id="add-comment-form">
 								<div class="form-group">
 									<label for="name">Nombre y apellidos</label>
-									<input type="text" class="form-control" id="name"
-										   placeholder="Introduzca su nombre y apellidos" maxlength="70">
+									<input type="text" class="form-control" id="name" name="name"
+										   placeholder="Introduzca su nombre y apellidos" maxlength="50" required>
 								</div>
 								<div class="form-group">
 									<label for="email">Email address</label>
-									<input type="email" class="form-control" id="email"
-										   placeholder="Introduzca su email">
+									<input type="email" class="form-control" id="email" name="email"
+										   placeholder="Introduzca su email" required>
 								</div>
 								<div class="form-group">
 									<label for="comment">Comentario</label>
-									<textarea class="form-control" id="comment" rows="3"></textarea>
+									<textarea class="form-control" id="comment" name="comment" rows="3"
+											  required></textarea>
+									<small class="form-text text-muted">Máximo 120 palabras.
+									</small>
 								</div>
 								<button type="submit" class="btn btn-primary">Añadir comentario</button>
 							</form>
