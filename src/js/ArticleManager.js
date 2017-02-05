@@ -1,4 +1,5 @@
 var ArticleService = require('./ArticleService');
+var Handlebars = require('handlebars');
 var moment = require('moment');
 require('moment/locale/es');
 
@@ -42,5 +43,24 @@ module.exports = {
                 $(this).text(date.format(formatOut));
             }
         });
-    }
+    },
+    renderComments: function (comments) {
+        var source = $("#comment-template").html();
+        var template = Handlebars.compile(source);
+        var commentHtml = template(comments);
+        $("#comments-list").find(".list-group").html(commentHtml);
+    },
+    getComments: function () {
+        var self = this;
+        ArticleService.getComments(function (comments) {
+            if (comments.length == 0) {
+                $("#no-comments").show();
+            } else {
+                self.renderComments(comments);
+                $("#no-comments").hide();
+            }
+        }, function (error) {
+            console.log("Ha habido algun error");
+        });
+    },
 }

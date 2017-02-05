@@ -1,3 +1,5 @@
+var API_URL = "/api/comments/";
+
 module.exports = {
 
     like: function (articleId) {
@@ -14,5 +16,34 @@ module.exports = {
 
     getArticleKey: function (id) {
         return "Article" + id;
+    },
+
+    getComments: function (successCallback, errorCallback) {
+        $.ajax({
+            url: API_URL,
+            type: "get",
+            success: function (data) {
+                successCallback(data);
+            },
+            error: function (error) {
+                errorCallback(error);
+                console.error("ArticleServiceError", error);
+            }
+        })
+    },
+    addComment: function (comment, successCallback, errorCallback) {
+        $.ajax({
+            url: API_URL,
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify(comment),
+            success: function (data) {
+                successCallback(data);
+            },
+            error: function (error) {
+                errorCallback(error);
+                console.error("SongsServiceError", error);
+            }
+        });
     }
 }

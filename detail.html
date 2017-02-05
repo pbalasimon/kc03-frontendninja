@@ -107,9 +107,8 @@
 				</article>
 				<div id="comments-title" class="container">
 					<div class="row">
-						<div class="col"><h6>Comentarios</h6></div>
+						<div class="col"><h6>Añadir nuevo comentario</h6></div>
 					</div>
-
 				</div>
 				<div id="comments-form" class="container">
 					<div class="row">
@@ -139,32 +138,10 @@
 				</div>
 				<div id="comments-list">
 					<div class="d-flex justify-content-center">
+						<div id="no-comments" class="alert alert-warning" role="alert">
+							Este artículo todavía no tiene comentarios.
+						</div>
 						<div class="list-group">
-							<a href="#"
-							   class="list-group-item list-group-item-action flex-column align-items-start">
-								<div class="d-flex w-100 justify-content-between">
-									<h5 class="mb-1">List group item heading</h5>
-								</div>
-								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-									risus varius blandit.</p>
-								<small>Donec id elit non mi porta.</small>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-								<div class="d-flex w-100 justify-content-between">
-									<h5 class="mb-1">List group item heading</h5>
-								</div>
-								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-									risus varius blandit.</p>
-								<small class="text-muted">Donec id elit non mi porta.</small>
-							</a>
-							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-								<div class="d-flex w-100 justify-content-between">
-									<h5 class="mb-1">List group item heading</h5>
-								</div>
-								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
-									risus varius blandit.</p>
-								<small class="text-muted">Donec id elit non mi porta.</small>
-							</a>
 						</div>
 					</div>
 				</div>
@@ -179,5 +156,16 @@
 		<footer>Los viajes de Pedro &copy; Estudiante II Web Development Master Bootcamp</footer>
 
 		<script src="dist/js/main.js"></script>
+		<script id="comment-template" type="text/x-handlebars-template">
+			{{# each this}}
+			<a href="#"
+			   class="list-group-item list-group-item-action flex-column align-items-start">
+				<div class="d-flex w-100 justify-content-between">
+					<small>{{name}} · {{email}}</small>
+				</div>
+				<p class="mb-1">{{text}}</p>
+			</a>
+			{{/each}}
+		</script>
 	</body>
 </html>
