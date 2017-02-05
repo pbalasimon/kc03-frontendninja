@@ -52,15 +52,19 @@ module.exports = {
     },
     getComments: function () {
         var self = this;
+
+        $("#loading-comments").show();
+
         ArticleService.getComments(function (comments) {
             if (comments.length == 0) {
                 $("#no-comments").show();
             } else {
                 self.renderComments(comments);
                 $("#no-comments").hide();
+                $("#loading-comments").hide();
             }
         }, function (error) {
-            console.log("Ha habido algun error");
+            $("#error-loading-comments").show();
         });
     },
 }

@@ -137,12 +137,28 @@
 					</div>
 				</div>
 				<div id="comments-list">
-					<div class="d-flex justify-content-center">
-						<div id="no-comments" class="alert alert-warning" role="alert">
-							Este artículo todavía no tiene comentarios.
-						</div>
-						<div class="list-group">
-						</div>
+					<div id="error-loading-comments" class="alert alert-danger" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						Se ha producido un error al cargar los comentarios.
+					</div>
+					<div id="error-add-comment" class="alert alert-danger" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						Se ha producido un error al añadir el comentario.
+					</div>
+					<div id="no-comments" class="alert alert-warning" role="alert">
+						Este artículo todavía no tiene comentarios.
+					</div>
+					<div id="comment-added" class="alert alert-success" role="alert">
+						Comentario añadido correctamente.
+					</div>
+					<div class="alert" id="loading-comments">
+						<i class="fa fa-spinner" aria-hidden="true"></i> Cargando comentarios
+					</div>
+					<div class="list-group">
 					</div>
 				</div>
 			</div>

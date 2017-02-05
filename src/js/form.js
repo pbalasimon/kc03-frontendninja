@@ -8,7 +8,6 @@ ArticleManager.setLikes();
 // formatear fechas
 ArticleManager.formatDates();
 
-
 $(".like").on("click", function () {
     var id = $(this).parent().closest('article').data("id");
     ArticleManager.like(id);
@@ -54,10 +53,11 @@ $("#add-comment-form").validate({
         }
 
         ArticleService.addComment(comment, function (data) {
+            $("#comment-added").show().fadeOut(4000);
             $("#add-comment-form")[0].reset();
             ArticleManager.getComments();
         }, function (error) {
-            alert("Se ha producido un error");
+            $("#error-add-comment").show();
         });
 
         return false;
@@ -72,7 +72,11 @@ $("#add-comment-form").validate({
 
 var elem = document.querySelector('#comments-list');
 
-Scrollpoints.add(elem, function (domElement) {
-    ArticleManager.getComments();
-});
+if (elem) {
+    Scrollpoints.add(elem, function (domElement) {
+        ArticleManager.getComments();
+    });
+}
+
+
 

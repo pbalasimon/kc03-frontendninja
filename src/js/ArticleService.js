@@ -42,7 +42,7 @@ module.exports = {
             },
             error: function (error) {
                 errorCallback(error);
-                console.error("SongsServiceError", error);
+                console.error("ArticleServiceError", error);
             }
         });
     }
