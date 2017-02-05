@@ -11,7 +11,7 @@
 	</head>
 	<body>
 
-		<nav id="primaryNav" class="navbar fixed-top navbar-light bg-faded">
+		<nav id="primaryNav" class="navbar fixed-top navbar-light">
 			<div class="container">
 				<a class="navbar-brand" href="#">Los viajes de Pedro</a>
 				<span class="navbar-text navbar-toggler-right">
@@ -23,7 +23,7 @@
 			</div>
 		</nav>
 
-		<nav id="secondaryNav" class="navbar fixed-top navbar-toggleable navbar-light bg-faded">
+		<nav id="secondaryNav" class="navbar fixed-top navbar-toggleable navbar-light">
 			<div class="container">
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -55,53 +55,71 @@
 
 		<main>
 			<div class="container">
-				<section id="articles">
-					<article>
-						<div class="row">
-							<div class="col">
-								<div class="media">
-									<img class="avatar"
-										 src="src/images/pedro.jpeg"
-										 alt="Avatar Pedro">
-									<div class="media-body">
-										<span class="author-name">Pedro Bala Simón</span>
-										<span class="date">01/11/2010</span>
-									</div>
+				<article class="article">
+					<div class="row">
+						<div class="col">
+							<div class="media">
+								<img class="article-avatar"
+									 src="src/images/pedro.jpeg"
+									 alt="Avatar Pedro">
+								<div class="media-body">
+									<span class="article-author">Pedro Bala Simón</span>
+									<span class="article-date">01/11/2010</span>
 								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="col">
-								<h3><a href="detail.html">Viaje Egipto</a></h3>
-							</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<h3><a class="article-title" href="detail.html">Viaje Egipto</a></h3>
 						</div>
-						<div class="row">
-							<div class="col">
-								<img class="image-article"
-									 src="https://dummyimage.com/600x200/000000/fff.png&text=IMAGE"
-									 alt="Imagen artículo">
-							</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<img class="article-image"
+								 src="https://dummyimage.com/1200x300/000000/fff.png&text=VIAJE EGIPTO"
+								 alt="Imagen artículo">
 						</div>
+					</div>
 
-						<div class="row">
-							<div class="col"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa
-								distinctio doloremque mollitia veritatis. Aperiam cumque distinctio doloremque illo
-								labore, maxime minima necessitatibus neque nesciunt quas qui, quod sed ullam.</p>
-							</div>
+					<div class="row">
+						<div class="col"><p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit.
+							Amet culpa
+							distinctio doloremque mollitia veritatis. Aperiam cumque distinctio doloremque illo
+							labore, maxime minima necessitatibus neque nesciunt quas qui, quod sed ullam.</p>
+							<p><i>Lorem ipsum dolor sit amet</i>, consectetur adipisicing elit. Eveniet fugiat numquam
+								pariatur
+								possimus. Alias dolore dolorum earum quam rem sint ullam unde! Blanditiis nemo, officia!
+								Adipisci facilis molestias odit porro.</p>
+							<p><a href="#">Lorem ipsum dolor sit amet</a>, consectetur adipisicing elit. A beatae cum
+								eligendi ipsam
+								sint veritatis voluptatum! Ab adipisci dignissimos dolores eum eveniet facilis, ipsum,
+								libero, molestiae nostrum quae sapiente voluptatem.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab architecto inventore
+								laudantium maxime, molestias nihil nobis nostrum obcaecati officia pariatur quisquam
+								quos rem, tenetur, voluptatum? Ex itaque officia sint?</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa illum quo similique
+								soluta ut. Alias asperiores aspernatur, assumenda debitis dolor dolorem expedita, fuga
+								illo impedit maiores pariatur porro quia, repudiandae.</p>
+
 						</div>
-					</article>
-				</section>
+					</div>
+					<div class="d-flex justify-content-end">
+						<div class="like mr-auto"><i class="fa fa-heart-o fa-md" aria-hidden="true"></i></div>
+						<div><i class="fa fa-comments fa-md" aria-hidden="true"> 1 Comentarios</i></div>
+					</div>
+				</article>
+
 			</div>
 		</main>
 
+		<button id="back-to-top" type="button" class="btn btn-secondary" data-toggle="tooltip"
+				data-animation="false" data-placement="left" title="Haga clic para volver al principio de la página">
+			<i class="fa fa-arrow-up" aria-hidden="true"></i>
+		</button>
+
 		<footer>Los viajes de Pedro &copy; Estudiante II Web Development Master Bootcamp</footer>
 
-		<!-- jQuery first, then Tether, then Bootstrap JS. -->
-		<script src="node_modules/jquery/dist/jquery.js"></script>
-		<script src="node_modules/tether/dist/js/tether.js"></script>
-		<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-		<script src="src/js/articles.js"></script>
-		<script src="src/js/main.js"></script>
-		<script src="node_modules/handlebars/lib/index.js"></script>
+		<script src="dist/js/main.js"></script>
 	</body>
 </html>
