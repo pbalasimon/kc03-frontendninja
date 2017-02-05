@@ -6,3 +6,6 @@ dist/
 
 # archivos configuración webstorm
 .idea/
+
+# archivos de base de datos
+db/
