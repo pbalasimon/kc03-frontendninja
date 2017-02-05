@@ -1,26 +1,6 @@
 var ArticleManager = require('./ArticleManager');
-var moment = require('moment');
-require('moment/locale/es');
 
 $(document).ready(function () {
-
-    moment.locale('es');
-    var articleDates = $(".article-date");
-    var formatIn = 'DD/MM/YYYY HH:mm:ss';
-    var formatOut = 'DD/MM/YYYY';
-    articleDates.each(function () {
-        var date = moment($(this).text(), formatIn);
-        var now = moment(new Date());
-        var duration = moment.duration(now.diff(date));
-
-        if (duration.get('hours') < 24 && duration.get('days') <= 0 && duration.get('years') <= 0) {
-            $(this).text(date.fromNow());
-        } else if (duration.get('days') < 7 && duration.get('years') <= 0) {
-            $(this).text(date.format('dddd'));
-        } else {
-            $(this).text(date.format(formatOut));
-        }
-    });
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 50) {
@@ -38,10 +18,13 @@ $(document).ready(function () {
         return false;
     });
 
+    // activar tooltips
     $('[data-toggle="tooltip"]').tooltip();
 
     // marcar like articulos
     ArticleManager.setLikes();
+    // formatear fechas
+    ArticleManager.formatDates();
 
 
     $(".like").on("click", function () {
