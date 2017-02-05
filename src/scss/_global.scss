@@ -64,6 +64,7 @@ body {
   box-shadow: 0 1px 4px $border-color;
   @extend .rounded;
   @extend .p-3;
+  @extend .mb-3;
 
   .row {
     margin-bottom: 0.8rem;
@@ -103,7 +104,7 @@ body {
       color: $brand-tertiary;
     }
   }
-  #like {
+  .like {
     cursor: pointer;
   }
 }

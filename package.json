@@ -9,18 +9,18 @@
   "author": "Pedro Bala Simón",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.6",
     "browser-sync": "^2.18.6",
     "browserify": "^14.0.0",
-    "bootstrap": "^4.0.0-alpha.6",
     "gulp": "^3.9.1",
     "gulp-buffer": "0.0.2",
     "gulp-notify": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-tap": "^0.1.3",
+    "jquery": "^3.1.1",
+    "moment": "^2.17.1",
     "node-font-awesome": "^1.0.2",
-    "tether": "^1.4.0",
-    "jquery": "^3.1.1"
+    "tether": "^1.4.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

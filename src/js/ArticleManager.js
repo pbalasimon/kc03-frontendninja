@@ -1,9 +1,8 @@
 var ArticleService = require('./ArticleService');
 
 module.exports = {
-    like: function (article) {
-        var $article = $(article);
-        var id = $article.parents().find("article").data("id")
+    like: function (id) {
+        var $article = $('article[data-id=' + id + ']');
         var liked = ArticleService.isLiked(id);
         if (liked) {
             ArticleService.unLike(id);
@@ -16,7 +15,7 @@ module.exports = {
     setLikes: function () {
         var articles = $("#articles").find("article");
         articles.each(function () {
-            var id = $(this).parents().find("article").data("id");
+            var id = $(this).data("id");
             var liked = ArticleService.isLiked(id);
             if (liked) {
                 $(this).find("i").removeClass("fa-heart-o").addClass("fa-heart");
