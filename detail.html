@@ -104,12 +104,67 @@
 
 						</div>
 					</div>
-					<div class="d-flex justify-content-end">
-						<div class="like mr-auto"><i class="fa fa-heart-o fa-md" aria-hidden="true"></i></div>
-						<div><i class="fa fa-comments fa-md" aria-hidden="true"> 1 Comentarios</i></div>
-					</div>
 				</article>
+				<div id="comments-title" class="container">
+					<div class="row">
+						<div class="col"><h6>Comentarios</h6></div>
+					</div>
 
+				</div>
+				<div id="comments-form" class="container">
+					<div class="row">
+						<div class="col">
+							<form>
+								<div class="form-group">
+									<label for="name">Nombre y apellidos</label>
+									<input type="text" class="form-control" id="name"
+										   placeholder="Introduzca su nombre y apellidos" maxlength="70">
+								</div>
+								<div class="form-group">
+									<label for="email">Email address</label>
+									<input type="email" class="form-control" id="email"
+										   placeholder="Introduzca su email">
+								</div>
+								<div class="form-group">
+									<label for="comment">Comentario</label>
+									<textarea class="form-control" id="comment" rows="3"></textarea>
+								</div>
+								<button type="submit" class="btn btn-primary">Añadir comentario</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="comments-list">
+					<div class="d-flex justify-content-center">
+						<div class="list-group">
+							<a href="#"
+							   class="list-group-item list-group-item-action flex-column align-items-start">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+									risus varius blandit.</p>
+								<small>Donec id elit non mi porta.</small>
+							</a>
+							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+									risus varius blandit.</p>
+								<small class="text-muted">Donec id elit non mi porta.</small>
+							</a>
+							<a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+								<div class="d-flex w-100 justify-content-between">
+									<h5 class="mb-1">List group item heading</h5>
+								</div>
+								<p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget
+									risus varius blandit.</p>
+								<small class="text-muted">Donec id elit non mi porta.</small>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 

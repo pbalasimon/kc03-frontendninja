@@ -113,6 +113,28 @@ body {
   margin-top: 1rem;
 }
 
+#comments-title {
+  @extend .mt-4;
+  padding-left: 0;
+}
+
+#comments-form {
+  background-color: $white;
+  border: 1px solid $border-color;
+  box-shadow: 0 1px 4px $border-color;
+  @extend .rounded;
+  @extend .p-3;
+  @extend .mt-3;
+  @extend .mb-3;
+}
+
+#comments-list {
+  @extend .mt-4;
+  a {
+    @extend .mb-3;
+  }
+}
+
 #back-to-top {
   cursor: pointer;
   position: fixed;
